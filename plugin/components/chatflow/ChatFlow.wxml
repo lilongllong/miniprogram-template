@@ -1,2 +1,5 @@
 <!--plugin/components/chatflow/ChatFlow.wxml-->
-<text>plugin/components/chatflow/ChatFlow.wxml</text>
+<view class="flow_root" style="background: {{uiConfig.global.background}};">
+  <include src="flow.wxml" />
+    <include src="normalInput.wxml" wx:if="{{abilityConfig.digitalCharacterType==0}}"/>
+</view>

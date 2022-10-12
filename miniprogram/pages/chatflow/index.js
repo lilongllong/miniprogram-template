@@ -5,14 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userIcon: getApp().globalData.userInfo.userIcon,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    console.log();
+    this.setData({ userIcon: getApp().globalData.userInfo.userIcon });
   },
 
   /**

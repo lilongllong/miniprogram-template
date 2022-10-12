@@ -22,4 +22,20 @@ page {
   margin-right: 20rpx;
 }
 
+.protrait {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.protrait > image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.protrait > .username {
+  text-align: left;
+}
+
+
 

@@ -9,7 +9,13 @@ Page({
       { value: 'mother', name: '妈妈', checked: false },
       { value: 'father', name: '爸爸', checked: false },
       { value: 'baby', name: '南希宝宝', checked: true },
-    ]
+    ],
+    userInfo: {
+      userIcon: getApp().globalData.userIcon,
+      userName: getApp().globalData.userName,
+      success: getApp().globalData.success,
+    },
+    loginState: false,
   },
 
   /**
@@ -17,7 +23,7 @@ Page({
    */
   onLoad(options) {
     const appInfos = getApp();
-    console.log('globalData', appInfos.globalData);
+    console.log(appInfos, 'appInfos');
   },
 
   /**
@@ -78,11 +84,72 @@ Page({
         return { ...item, checked: false };
       }
     });
-    console.log(e, this.data.rules);
   },
   _startChatRoom(event) {
     wx.navigateTo({
       url: '../chatflow/index',
-  });
+    });
+  },
+  _manualGetUserInfo() {
+    const appInfos = getApp();
+    if (appInfos.globalData.loginState) {
+      wx.getUserProfile({
+        lang: 'zh_CN',
+        desc: '展示用户头像表明是本人',
+        success: ({ userInfo }) => {
+          const { nickName, avatarUrl } = userInfo;
+          getApp().globalData.userInfo = {
+            userIcon: avatarUrl,
+            userName: nickName,
+            success: true,
+          };
+          this.setData({
+            userInfo: {
+              userIcon: avatarUrl,
+              userName: nickName,
+              success: true,
+            }
+          });
+        },
+        fail: (error) => {
+          console.log('获取用户信息失败', error)
+        },
+        complete: () => {
+        }
+      });
+    } else {
+      wx.login({
+        timeout: 600000, // 一分钟超时时间
+        success:() => {
+          wx.getUserProfile({
+            lang: 'zh_CN',
+            desc: '展示用户头像表明是本人',
+            success: ({ userInfo }) => {
+              const { nickName, avatarUrl } = userInfo;
+              getApp().globalData.userInfo = {
+                userIcon: avatarUrl,
+                userName: nickName,
+                success: true,
+              };
+              this.setData({
+                userInfo: {
+                  userIcon: avatarUrl,
+                  userName: nickName,
+                  success: true,
+                }
+              });
+            },
+            fail: (error) => {
+              console.log('获取用户信息失败', error)
+            },
+            complete: () => {
+            }
+          });
+        },
+        fail: () => {
+          this.setData({ loginState: false });
+        }
+      })
+    }
   }
 })

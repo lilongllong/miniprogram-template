@@ -1,0 +1,41 @@
+<scroll-view
+  id="scrollView"
+  class="scroll_view"
+  scroll-anchoring="{{true}}"
+  scroll-top="{{scrollTop}}"
+  scroll-y="scrollY"
+  scroll-with-animation="{{scrollWithAnimation}}"
+>
+  <view slot="refresher" class="logo_bg">
+    <view class="logo_title" style="color: {{uiConfig.global.primaryColor}};">李南希父母倾情支持</view>
+  </view>
+  <view class="message_list" wx:for="{{messageList}}" wx:key="index" id="{{'item_' + index}}">
+    <view class="message_frame_base" style="flex-direction: {{item.messageType < 100 ? 'row-reverse' : 'row'}};">
+      <view class="portrait_frame" wx:if="{{item.needPortrait}}">
+        <image class="portrait" mode='aspectFit' src="{{userIcon}}" />
+      </view>
+      <view class="message_timestamp"
+        style="color: {{uiConfig.timestamp.color}}"
+        wx:if="{{item.messageType == 100}}"
+      >
+        {{item.content.text}}
+      </view>
+      <view class="card_question"
+        style="background: {{uiConfig.cardQuestion.background}}; color: {{uiConfig.cardQuestion.color}};"
+        wx:if="{{item.messageType == 0}}"
+      >{{item.content}}</view>
+      <view class="{{item.needPortrait ? 'card_type1' : 'card_type2'}} card_fill"
+        style="background: {{uiConfig.cardAnswer.background}};{{(item.moreLink != '' && item.moreLink != null)?'width:512rpx':''}}"
+        wx:if="{{item.messageType>=200}}"
+      >
+        <view class="{{!(item.moreLink != null && item.moreLink != '' || item.needFeedback)?'text_pad_bottom':''}} text_pad_top">
+          <view wx:if="{{item.content}}"  style="color:{{uiConfig.cardAnswer.content.color}}">
+            <view wx:if="{{item.messageType==200}}" class="{{(item.moreLink != null && item.moreLink != '')?'text_pad_bottom':''}}" style='white-space:pre-wrap;'>{{item.content.text}}</view>
+            <RichText uiConfig="{{uiConfig.cardAnswer.content.moreButton}}" wx:if="{{item.messageType==201||item.messageType==202}}" id='{{index}}' bind:RichTextMoreClick="_onClickMore" text="{{item.content.text}}" bindtap="_onEventTextClicked"></RichText>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,1 +1,120 @@
 /* plugin/components/chatflow/ChatFlow.wxss */
+Page {
+  --vh-animation-width:420rpx; /*虚拟人宽度*/
+  --vh-animation-height:420rpx; /*虚拟人高度*/
+  --vh-transparent-height:350rpx; /*虚拟人透明高度*/
+}
+.flow_root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #f3f3ef;
+}
+.scroll_view {
+  width: 100%;
+  height: 0;
+  flex-grow: 1;
+}
+
+.message_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.message_frame_base {
+  width: 704rpx;
+  display: flex;
+  font-size: 32rpx;
+  flex-direction: row;
+  margin: 20rpx 16rpx;
+}
+
+.message_bottom {
+  width: 100%;
+  height: calc(var(--vh-animation-height));
+  position: relative;
+}
+
+.portrait_frame {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+}
+
+.card_question {
+  max-width: 518rpx;
+  padding: 26rpx 24rpx;
+  font-size: 32rpx;
+  color: white;
+  background: #00A4FF;
+  word-break:break-all;
+  border-radius: 32rpx 8rpx 32rpx 32rpx;
+  overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.message_timestamp {
+  width: 100%;
+  font-size: 24rpx;
+  color: #8C8C8C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_padding{
+  padding-top: 24rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+
+}
+.card_padding_bottom{
+  padding-bottom: 20rpx;
+}
+
+.message_card {
+  width: 100%;
+}
+
+.message_bg_image{
+  background-repeat: no-repeat;
+  background-size: 45% 45%;
+  background-position: 100% 0px;
+  margin-left: 50rpx;
+  border-radius:32rpx;
+}
+
+.card_type1 {
+  max-width: 518rpx;
+  margin-left: 16rpx;
+  margin-right: 32rpx;
+  padding: 0 24rpx;
+  background: white;
+  border-radius: 8rpx 32rpx 32rpx 32rpx;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  word-wrap:break-word;
+}
+
+.card_fill {
+  flex-grow: 1;
+}
+
+.text_pad_top {
+  margin-top: 24rpx;
+}
+.text_pad_bottom{
+  margin-bottom: 24rpx;
+}

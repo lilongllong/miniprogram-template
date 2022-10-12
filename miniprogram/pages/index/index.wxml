@@ -1,7 +1,8 @@
 <!--pages/index/index.json.wxml-->
 <view>
+  <button class="btn" type="primary" bindtap="_startChatRoom">Nancy 益智小游戏</button>
   <button class="btn" type="primary" bindtap="_startTimeMachine">Nancy 时光长廊</button>
-  <button class="btn" type="primary" bindtap="_startChatRoom">Nancy 聊天室</button>
+  <button disabled="{{!userInfo.success}}" class="btn" type="primary" bindtap="_startChatRoom">Nancy 聊天室</button>
   <view class="rules">角色选择</view>
   <radio-group class="rules-content" bindchange="onRuleChange">
     <view class="rule-item-view" wx:for="{{rules}}" wx:key="index">
@@ -9,4 +10,10 @@
       <text>{{item.name}}</text>
     </view>
   </radio-group>
+
+  <button class="btn" type="primary" bindtap="_manualGetUserInfo">获取个人信息</button>
+  <view class="protrait" v-if="{{loginState}}">
+    <image src="{{userInfo.userIcon}}" mode="aspectFit" />
+    <text class="username">{{userInfo.userName}}</text>
+  </view>
 </view>

@@ -1,0 +1,30 @@
+
+
+<!--文本输入布局，这里虚拟人版本及非虚拟人版本都需要用到,独立抽取出来,分别被NormalInput.wxml及VirtualHumanInput.wxml引用-->
+
+<view class="input_key_bg"
+      wx:if="{{!(searchInputTexts && searchInputTexts.length > 0) && bubbles && bubbles.length > 0}}">
+    <view wx:for="{{bubbles}}" wx:key="index">
+        <view class="input_key" style="background:{{uiConfig.bubble.item.background}};color:{{uiConfig.bubble.item.color}};border: 1px solid {{uiConfig.bubble.item.borderColor}}" catchtap='_BubbleSelect' data-name="{{item}}" data-index="{{index}}">
+            {{item.content}}
+        </view>
+    </view>
+</view>
+<view class="search_input_bg" style="background:{{uiConfig.associate.background}}" wx:if="{{searchInputTexts && searchInputTexts.length > 0}}">
+    <view wx:for="{{searchInputTexts}}" wx:key="index" catchtap='_SearchInputSelect' data-name="{{item}}"
+          data-index="{{index}}">
+        <!--view class="search_input_item" catchtap='SearchInputSelect' data-name="{{item}}" data-api="{{api}}">{{item.content}}</view-->
+        <parser class="search_input_item" style="color:{{uiConfig.associate.color}}" html="{{item.showText}}"
+                data-name="{{item}}" data-index="{{index}}"/>
+    </view>
+</view>
+<view class='text_input_bg' style="background:{{uiConfig.input.background}}">
+    <view class="input-selecter" bindtap='_changeInputMode'>
+        <image class='input-selecter-icon' mode='aspectFit'
+               src="{{isTextInput?uiConfig.input.switchButton.voiceIcon:uiConfig.input.switchButton.keyboardIcon}}"></image>
+    </view>
+    <input class='input-text' style="background:{{uiConfig.input.editText.background}};color:{{uiConfig.input.editText.color}};border: 1px solid {{uiConfig.input.editText.borderColor}}" placeholder-style="color:{{uiConfig.input.editText.noteColor}};opacity: 0.5" placeholder="请输入你想问的问题" type="text" focus="{{isInputFocus}}" adjust-position="{{true}}"
+           cursor-spacing='25rpx' confirm-type="send" bindinput='_textInput' bindconfirm='_send' bindblur="_lostFocus"
+           value='{{input_content}}' confirm-hold="{{true}}"></input>
+    <view class="input-send" style="background:{{uiConfig.input.sendButton.background}};color:{{uiConfig.input.sendButton.color}};{{isInputNullText?'opacity:0.3':''}}" bindlongtap='sendLongPress' catchtap='_send'>发送</view>
+</view>

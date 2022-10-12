@@ -1,0 +1,10 @@
+<view class="{{inputChangeWithAnim?'input_frame_text_anim':'input_frame_text'}}">
+  <!-- <include src="textInput.wxml" /> -->
+  <view class="voice_input_bg" style="background:{{uiConfig.input.background}}">
+    <view class="voic_state_text" style="color:{{uiConfig.input.voice.stateTextColor}}">{{isMicKeyDown?'说话中...':'按住说话'}}</view>
+    <view class="voice_icon_bg" hover-class="voice_icon_bg_click"
+      bind:touchstart="_voiceKeyDown" bind:touchend="_voiceKeyUp">
+      <image class='ic-full' mode='aspectFit' src="{{uiConfig.input.voice.icon}}"></image>
+    </view>
+  </view>
+</view>
