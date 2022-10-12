@@ -1,0 +1,12 @@
+<!--pages/index/index.json.wxml-->
+<view>
+  <button class="btn" type="primary" bindtap="_startTimeMachine">Nancy 时光长廊</button>
+  <button class="btn" type="primary" bindtap="_startChatRoom">Nancy 聊天室</button>
+  <view class="rules">角色选择</view>
+  <radio-group class="rules-content" bindchange="onRuleChange">
+    <view class="rule-item-view" wx:for="{{rules}}" wx:key="index">
+      <radio value="{{item.value}}" checked="{{item.checked}}" />
+      <text>{{item.name}}</text>
+    </view>
+  </radio-group>
+</view>

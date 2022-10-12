@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Nancy聊天室",
+  "disableScroll": true,
+  "usingComponents": {
+    "ChatFlow": "plugin://customer-plugin/ChatFlow"
+  }
+}

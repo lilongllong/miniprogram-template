@@ -1,0 +1,9 @@
+{
+  "publicComponents": {
+      "ChatFlow": "components/chatflow/ChatFlow"
+  },
+  "main": "index.js",
+  "pages": {
+      "history-message": "pages/HistoryMessage/history-message"
+  }
+}

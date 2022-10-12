@@ -1,0 +1,25 @@
+/* pages/index/index.json.wxss */
+
+page {
+  background-color: #f3f3ef;
+}
+.btn {
+  margin: 40rpx 60rpx;
+}
+.rules {
+  margin: 20rpx 60rpx 10rpx 60rpx;
+}
+
+.rules-content {
+  display: flex;
+  margin: 0rpx 60rpx;
+  flex-direction: row;
+}
+
+.rule-item-view {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20rpx;
+}
+
+

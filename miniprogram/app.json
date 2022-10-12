@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chatflow/index"
+  ],
+  "plugins": {
+    "customer-plugin": {
+      "version": "dev",
+      "provider": "wx1b70dde41e08001e"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的地理位置将用于记录你的成长轨迹"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

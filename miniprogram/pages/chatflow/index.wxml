@@ -1,0 +1,4 @@
+<!--pages/chatflow/index.wxml-->
+<view style="height: 100vh;">
+  <ChatFlow />
+</view>
