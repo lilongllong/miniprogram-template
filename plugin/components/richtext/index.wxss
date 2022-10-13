@@ -1,0 +1,54 @@
+/* plugin/components/richtext/index.wxss */
+.more_btn{
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+.more_bg{
+  display: flex;
+  width: 144rpx;
+  height: 48rpx;
+  background: #C4C4C4;
+  border-radius: 48rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.text{
+  letter-spacing:3rpx;
+}
+
+.more_panel{
+  /*margin-top: 10rpx;*/
+  display: flex;
+  flex-direction: column;
+  height: 92rpx;
+  width:100%;
+  
+
+  /*text-align: center;*/
+
+  align-items: center;
+  justify-content: center;
+
+  /*background-image: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 70%,rgba(255,255,255,0) 100%);*/
+
+}
+
+.line{
+  display: flex;
+  height: 2rpx;
+  width:100%;
+  background:#F3F3F3;
+  overflow: hidden;
+  
+}
+
+.show_more {
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}

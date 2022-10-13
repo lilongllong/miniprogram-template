@@ -226,5 +226,30 @@ module.exports = [
               "content": "新问题7"
           }
       ]
+  },
+  {
+    content: "战略导弹部队",
+    messageType: 0,
+    needPortrait: false
+  },
+  {
+    content: {
+      text: '<p><img src="https://dingdang-kefu-1251316161.cos.ap-guangzhou.myqcloud.com/material/2a_1663553028524_66/1663554950466924_zGDqXtNIgk.jpg?type=image-material" class="industry-rich-image"> <video src="https://dingdang-kefu-1251316161.cos.ap-guangzhou.myqcloud.com/material/2a_1663553028524_66/1663555652919935_5FgRDKGn7t.avi" controls="nodownload nofullscreen noremoteplayback" width="100%" height="100%" webkit-playsinline="true" playsinline="true" x5-playsinline="true" class="industry-rich-video" poster="https://dingdang-kefu-1251316161.cos.ap-guangzhou.myqcloud.com/material/2a_1663553028524_66/1663555652919935_5FgRDKGn7t.avi?ci-process=snapshot&amp;time=1&amp;format=jpg">﻿<span contenteditable="false"></span>﻿</video> <audio src="https://dingdang-kefu-1251316161.cos.ap-guangzhou.myqcloud.com/material/2a_1663553028524_66/1663555326285549_n2mZV69Y0H.mp3" controls="false" controlslist="nodownload" style="border-radius: 3px" class="industry-rich-audio">﻿<span contenteditable="false"></span>﻿</audio> <div class="smart-area" style="width: 200px;height: 60px;cursor:pointer;position: relative" data-link-url="https://dingdang-kefu-1251316161.cos.ap-guangzhou.myqcloud.com/material/2a_1663553028524_66/1663555055877426_LJNz59kllN.pptx" data-icon-url="https://vfiles.gtimg.cn/vupload/20211220/afa3861639970161290.svg" data-text="5.pptx">﻿<span contenteditable="false"><a style="display: block;position: absolute;height: 100%; width: 100%; left: 0; top: 0;z-index: 2" href="https://dingdang-kefu-1251316161.cos.ap-guangzhou.myqcloud.com/material/2a_1663553028524_66/1663555055877426_LJNz59kllN.pptx" data-link-url="https://dingdang-kefu-1251316161.cos.ap-guangzhou.myqcloud.com/material/2a_1663553028524_66/1663555055877426_LJNz59kllN.pptx"></a><div style="background-color: rgba(0, 0, 0, .04);border-radius: 3px;padding: 20px 15px; display: flex;align-items: center; width: 100%; height: 100%" class="quill-custom-card"><img src="https://vfiles.gtimg.cn/vupload/20211220/afa3861639970161290.svg" alt="云小微" style="max-width: -1rem;min-width: 1px;width: 28px;margin: 0;"><span style="margin-left: 6px">5.pptx</span></div></span>﻿</div> 战略导弹部队战略导弹部队</p><p><br></p>'
+    },
+    customType: 0,
+    data: null,
+    innerInfo: "",
+    isRecognize: false,
+    messageId: "",
+    messageType: 201,
+    moreLink: "",
+    needFeedback: true,
+    needPortrait: true,
+    paramsId: "1580095162159464448",
+    recommend: null,
+    sessionId: "gz1665626797973834_Xx3FImPRqpHjk",
+    speakTips: " ﻿﻿ ﻿﻿ ﻿5.pptx﻿ 战略导弹部队战略导弹部队",
+    title: "猜您想问"
   }
+
 ];

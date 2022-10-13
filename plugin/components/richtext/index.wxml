@@ -1,0 +1,11 @@
+<!--plugin/components/richtext/index.wxml-->
+<view class="richtext_content {{is_show_more?'show_more':''}}" style="max-height:{{is_show_more?rich_max_height:10000}}px">
+	<view wx:if="{{data}}" id="richText-view" class="text">
+    <rich-text class="rich-text-item" nodes="{{data}}" bindtap="onRichTextClick" />
+	</view>
+</view>
+<view class="more_panel" catchtap="onClick" wx:if='{{is_show_more}}'>
+	<view class="more_bg">
+		<view class="more_btn" style="color:{{uiConfig.color}};">查看更多</view>
+	</view>
+</view>
