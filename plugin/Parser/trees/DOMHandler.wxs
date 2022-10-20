@@ -1,0 +1,14 @@
+module.exports = {
+  isContinue: function(style, display) {
+    // 判断当前组件是否渲染
+    return true;
+  },
+  getImageStyle: function(node) {
+    // 获取图片richText的样式
+    return '';
+  },
+  getImageNode: function(node) {
+    // 设置 rich-text nodes 的相关属性
+    return [node];
+  }
+};

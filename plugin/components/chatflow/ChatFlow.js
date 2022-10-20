@@ -38,7 +38,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    _onClickMore(event) {
+      const longText = event.detail.eventDetail;
+      this.setData({longTextShow: true, richLongText: longText});
+    },
+    // 点击折叠文本展开界面的 关闭
+    _onClickMoreClose(event) {
+      this.setData({longTextShow: false});
+    },
   },
 
   /**

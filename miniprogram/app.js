@@ -15,7 +15,9 @@ App({
     },
     loginState: false,
   },
-  onLaunch() {
+  onLaunch(options) {
+    const launchOptions = wx.getLaunchOptionsSync();
+    console.log(options, launchOptions);
     // 加载完成，启动插件初始化
     wx.login({
       timeout: 600000, // 一分钟超时时间

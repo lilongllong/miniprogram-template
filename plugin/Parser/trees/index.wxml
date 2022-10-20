@@ -1,0 +1,15 @@
+<!--plugin/Parser/trees/index.wxml-->
+<wxs module="domHandler" src="./DOMHandler.wxs" />
+<block wx:for="{{nodes}}" wx:key="{{index}}">
+  <rich-text 
+    wx:if="{{item.name === 'img'}}" 
+    class="img"
+    style="text-indent: 0;{{domHandler.getImageStyle(item)}}" 
+    nodes="{{domHandler.getImageNode(item)}}"
+    bindtap="previewEvent"
+  />
+  <block wx:elif="{{item.type === 'text'}}">
+    <text wx:if="{{!item.decode}}" decode>{{item.text}}</text>
+    <rich-text wx:else style="display: inline-block;" nodes="{{[item]}}"></rich-text>
+  </block>
+</block>

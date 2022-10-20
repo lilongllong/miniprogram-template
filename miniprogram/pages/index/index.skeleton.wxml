@@ -1,0 +1,46 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/10/14上午11:31:41
+使用方法：
+在 /Users/lilonglong/github/miniprogram-template/miniprogram/pages/index/index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 /Users/lilonglong/github/miniprogram-template/miniprogram/pages/index/index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view>
+      <button class="btn sk-transparent sk-button sk-pseudo sk-pseudo-circle" type="primary">Nancy 益智小游戏</button>
+      <button class="btn sk-transparent sk-button sk-pseudo sk-pseudo-circle" type="primary">Nancy 时光长廊</button>
+      <button class="btn sk-transparent sk-button sk-pseudo sk-pseudo-circle" type="primary">Nancy 聊天室</button>
+      <view class="rules sk-transparent sk-text-14-2857-403 sk-text">角色选择</view>
+      <radio-group class="rules-content">
+        <view class="rule-item-view">
+          <radio value="mother" color="#EFEFEF"></radio>
+          <text class="sk-transparent sk-text-14-2857-171 sk-text">妈妈</text>
+        </view>
+        <view class="rule-item-view">
+          <radio value="father" color="#EFEFEF"></radio>
+          <text class="sk-transparent sk-text-14-2857-91 sk-text">爸爸</text>
+        </view>
+        <view class="rule-item-view">
+          <radio value="baby" color="#EFEFEF"></radio>
+          <text class="sk-transparent sk-text-14-2857-168 sk-text">南希宝宝</text>
+        </view>
+      </radio-group>
+      <button class="btn sk-transparent sk-button sk-pseudo sk-pseudo-circle" type="primary">获取个人信息</button>
+      <view class="protrait">
+        <image mode="aspectFit" class="sk-image"></image>
+        <text class="username"></text>
+      </view>
+    </view>
+  </view>
+</template>
