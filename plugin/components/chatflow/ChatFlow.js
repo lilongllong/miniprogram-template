@@ -46,6 +46,10 @@ Component({
     _onClickMoreClose(event) {
       this.setData({longTextShow: false});
     },
+
+    _loginSuccess(event) {
+      console.log('登录成功', event);
+    }
   },
 
   /**

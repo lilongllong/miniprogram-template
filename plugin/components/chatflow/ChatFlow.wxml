@@ -2,4 +2,7 @@
 <view class="flow_root" style="background: {{uiConfig.global.background}};">
   <include src="flow.wxml" />
     <include src="normalInput.wxml" wx:if="{{abilityConfig.digitalCharacterType==0}}"/>
+  <!-- <functional-page-navigator name="loginAndGetUserInfo" args="" version="develop" bindsuccess="_loginSuccess">
+    <button>登录到插件</button>
+  </functional-page-navigator> -->
 </view>
