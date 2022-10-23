@@ -4,5 +4,7 @@ module.exports = {
   },
   setConfig(config) {
     // 设置配置
+  },
+  parseHtml(html) {
   }
 };

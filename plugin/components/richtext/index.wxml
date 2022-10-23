@@ -4,7 +4,7 @@
     <rich-text class="rich-text-item" nodes="{{data}}" bindtap="onRichTextClick" />
 	</view>
 </view>
-<view class="more_panel" catchtap="onClick" wx:if='{{is_show_more}}'>
+<view class="more_panel" catchtap="onMoreClick" wx:if='{{is_show_more}}'>
 	<view class="more_bg">
 		<view class="more_btn" style="color:{{uiConfig.color}};">查看更多</view>
 	</view>
