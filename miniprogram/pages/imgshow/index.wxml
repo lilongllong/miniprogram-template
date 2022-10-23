@@ -1,6 +1,6 @@
 <!--pages/imgshow/index.wxml-->
 <view>
-  <image src="https://alifei01.cfp.cn/creative/vcg/800/version23/VCG41157526459.jpg"></image>
+  <image src="{{userIcon}}"></image>
   <view class="img-list-scroll">
     <view class="img-item" wx:for="{{imgList}}" wx:key="index">
       <image src="{{item}}"></image>
