@@ -1,0 +1,23 @@
+/* pages/imgshow/index.wxss */
+
+.img-list-scroll {
+  display: flex;
+  overflow: scroll;
+}
+
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-item {
+  margin: 5rpx;
+  border-radius: 10rpx;
+}
+
+.img-item > image {
+  width: 240rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  object-fit: cover;
+}

@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/chatflow/index"
+    "pages/chatflow/index",
+    "pages/imgshow/index"
   ],
   "plugins": {
     "customer-plugin": {

@@ -90,6 +90,11 @@ Page({
       url: '../chatflow/index',
     });
   },
+  _startTimeMachine(event) {
+    wx.navigateTo({
+      url: '../imgshow/index',
+    })
+  },
   _manualGetUserInfo() {
     const appInfos = getApp();
     if (appInfos.globalData.loginState) {
